@@ -1350,3 +1350,31 @@ Traceback (most recent call last):
   File "lib\discord\http.py", line 196, in request
     raise Forbidden(r, data)
 discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[11/05/2017 22:13] ERROR red on_command_error 369: Exception in command 'payday'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\economy.py", line 447, in payday
+    str(self.settings[server.id]["PAYDAY_CREDITS"])))
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[11/05/2017 23:56] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 10 credits to hf(211652626935316480)
+[11/05/2017 23:57] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 10 credits to Fangzhuan(215681717682307072)
+[12/05/2017 00:10] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 20 credits to Givemepaw(215674658530394112)
+[12/05/2017 00:11] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 20 credits to Givemepaw(215674658530394112)
+[12/05/2017 00:26] ERROR red on_command_error 369: Exception in command 'audioset volume'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1136, in audioset_volume
+    vc.audio_player.volume = percent / 100
+AttributeError: 'VoiceClient' object has no attribute 'audio_player'
+[12/05/2017 00:36] INFO economy transfer 352: Givemepaw(215674658530394112) transferred 500 credits to chopperdamus(221334564985896960)
+[12/05/2017 19:46] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 500 credits to Givemepaw(215674658530394112)

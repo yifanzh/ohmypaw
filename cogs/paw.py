@@ -1,22 +1,40 @@
 import discord
 from random import choice as randchoice
 from discord.ext import commands
+from .insult import Insult
+from .utils.dataIO import fileIO
 
 greets = ["http://imgur.com/47vI9T5", "QwQ", "=w=" , "(:з」∠)", "=A=","http://imgur.com/Y5DMDqH"]
 names = {"Dragon":"爪公","Fangzhuan":"Gay砖","Baoz":"包子","Andrew":"Andrew","Givemepaw":"假小爪","hf":"贼神","ppadante":"弱鸡嫩","Cielyc":"欧皇","illidanaire":"王总","Maxxia":"Max","Vurtune":"凯总","chopperdamus":"Chopper"
 ,"Danker":"Danker","Miyano":"随老师","momotea":"momotea","Doombefall":"2k","Silentstorm":"Senpai","Mylei":"Emily","Zillidan":"Zach"}
 dirty = ["penis","ass","丁丁","鸡","菊花","vagina","打飞机","下面"]
 reply_to_dirty = ["太污了","有毒吧","你们太污了","不懂你们在说什么","我看不懂","你们有毒吧","...","哈?","啊?","妈个鸡","...","这帮傻屌..."]
-gay = ["喜欢","爱","上","fuck","干","舔","插","打炮","gay","基","爽"]
+gay = ["喜欢","爱","上","fuck","干","舔","插","打炮","gay","基","爽","操","草","艹","肏"]
 reply_to_gay = ["你们这群gay","有毒吧","谁来把这人屏蔽了","...","傻逼吧","你们不要欺负我","调戏我的都是傻逼","别闹"]
 suspicious = ["你们不要说我坏话","我看见了我的名字","你们在说我什么","是在叫我吗"]
 who = ["gay","傻逼","汉子","妹子","丑逼","肥宅","傲娇","渣渣","女神","男神","土豪","基佬","阳痿","傻屌","武林高手","魔法少女","处男","荡妇","牛郎","AV女忧","孤儿","孙子","小屁孩","老板","大佬","穷逼","骚货","高手","交际花","单身狗"]
-swear = ["傻","逼","脑残","神经","白痴","蠢","stupid","asshole","bitch"]
+swear = ["傻","逼","脑残","神经","白痴","蠢","stupid","asshole","bitch","笨","呆","二","贱"]
 
 replies = {"Fangzhuan":["凯总，快来把方砖屏蔽了","找你的嫩嫩去","方砖太污了","这个傻屌"],
            "ppadante": ["找你的方砖去","方砖，快来管管你的嫩嫩","不要和方砖一样污"],
            "Silentstorm":["我要看senpai打炉石","ss,你的男朋友呢","ss快打炉石","SS天梯第一了吗?"],
            "momotea":["momotea,快去打文明"]}
+
+stories = ["你们知道公会建会成员都是谁吗？\n是Taleta(会长),Kaioolmtte,Carl,Getshot,Treebro,Joverined",
+           "公会第一次组团下普通BRF,由于不够10人,只能找野人凑人数.\n第一波小怪灭了三次.\n两位野人大哥秒退，在本门口吐槽：\nYou guys raid on PEOPLE!\n后来Boss没见到，散了。",
+           "公会第一次凑齐人数打本,半夜3点还没能过普通黑手.\nAeralfos太困表示坚持不住了...\n此后这人再也没上过线",
+           "公会从滑大论坛招到第一名成员是Pigwannafly,后来成为了老相好.",
+           "有一天，Dragon在战网好友无意看见SS在打魔兽世界.\n一顿安利之后，成功拉进了公会.\n从此公会蒸蒸日上.",
+           "公会从野人招到了第一名成员是Raygulus.\n神马，你们不知道他是谁？\n把想成他是N总的初恋就好.",
+           "公会成立时间是2015年6月23日.",
+           "公会里招募到的唯一奥山土著人民是Zach.",
+           "15年圣诞前夕决定开始正式招募野人,并在同一天，陆续招募到了小爪和Zach等。以下为招募对话:\n\"你打炉石吗\"\n\"打\"\n\"知道Silentstorm是谁吗，他在我们公会.\"\n\"卧槽,你们在哪个服务器,我来了.\"",
+           "2016年1月17日,公会第一次凑齐人数开荒M.",
+           "Andrew是Zach的真机(基)友.中间还隔个妹子.",
+           "2000哥的名字是从一张王八的账单而来",
+           "公会第一代巫妖王是战神哥，之后方砖顺利上位.",
+           "有一次分配装备的时候,Dragon问Emily为什么不要披风.\nEmily说:我有更好的\n众人不信,随后一看,披风上一行小字:\nMade by Crazystorm.",
+           "刚开始Emily来打团的时候还是单身,众人在teamspeak调侃ss,Dragon问了一句:开组了,你的妹子呢?\nEmily:我在呢..."]      
 
 previous = ""
 reply =""
@@ -26,6 +44,7 @@ class Paw:
     
     def __init__(self, bot):
         self.bot = bot
+        self.insult = Insult(bot)
 
     async def on_message(self, message):
         global reply
@@ -60,21 +79,23 @@ class Paw:
                     if keyword in message.content.lower():
                         badBoy = "bad"
                         break
-                if "是不是" in message.content.lower():
+                if "我要听故事" in message.content.lower():
+                    await self.bot.send_message(message.channel, randchoice(stories))
+                elif "是不是" in message.content.lower() or ("是" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = randchoice(list(names.values()))
                         reply += "也许是，反正我不是"
                         await self.bot.send_message(message.channel, randchoice(["不是",reply,"你才是","你在说你自己吗"]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(["是呀","嗯哼","是的","这都被你发现了","必须是","你才知道?"]))
-                elif "会不会" in message.content.lower():
+                elif "会不会" in message.content.lower() or ("会" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = randchoice(list(names.values()))
                         reply += "应该会"
                         await self.bot.send_message(message.channel, randchoice(["不会",reply,"肯定不会"]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(["会","也许吧","可能会","肯定会","看情况"]))
-                elif "想不想" in message.content.lower():
+                elif "想不想" in message.content.lower() or ("想" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = "我知道"
                         reply = randchoice(list(names.values()))
@@ -96,6 +117,8 @@ class Paw:
                         await self.bot.send_message(message.channel, randchoice(replies[sender.name]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(reply_to_gay))
+                elif badBoy == "bad":
+                    await self.insult.paw_insult(message)
                 elif "你是谁" in message.content:
                     await self.bot.send_message(message.channel, "我是爪妹啊")
                 elif "是谁" in message.content:
@@ -118,21 +141,23 @@ class Paw:
                     if keyword in message.content.lower():
                         badBoy = "bad"
                         break
-                if "是不是" in message.content.lower():
+                if "我要听故事" in message.content.lower():
+                    await self.bot.send_message(message.channel, randchoice(stories))
+                elif "是不是" in message.content.lower() or ("是" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = randchoice(list(names.values()))
                         reply += "也许是，反正我不是"
                         await self.bot.send_message(message.channel, randchoice(["不是",reply,"你才是","你在说你自己吗"]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(["是呀","嗯哼","是的","这都被你发现了","必须是","你才知道?"]))
-                elif "会不会" in message.content.lower():
+                elif "会不会" in message.content.lower() or ("会" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = randchoice(list(names.values()))
                         reply += "应该会"
                         await self.bot.send_message(message.channel, randchoice(["不会",reply,"肯定不会"]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(["会","也许吧","可能会","肯定会","看情况"]))
-                elif "想不想" in message.content.lower():
+                elif "想不想" in message.content.lower() or ("想" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = "我知道"
                         reply = randchoice(list(names.values()))
@@ -154,6 +179,8 @@ class Paw:
                         await self.bot.send_message(message.channel, randchoice(replies[sender.name]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(reply_to_gay))
+                elif badBoy == "bad":
+                    await self.insult.paw_insult(message)
                 elif "你是谁" in message.content:
                     await self.bot.send_message(message.channel, "我是爪妹啊")
                 elif "是谁" in message.content:
@@ -163,7 +190,23 @@ class Paw:
                 elif badBoy == "good":
                     await self.bot.send_message(message.channel, randchoice(greets))
             elif "paw" in message.content.lower() or "爪" in message.content:
-                await self.bot.send_message(message.channel, randchoice(suspicious))
+                badBoy = "good"
+                for keyword in dirty:
+                    if keyword in message.content.lower():
+                        badBoy = "dirty"
+                        break
+                for keyword in gay:
+                    if keyword in message.content.lower():
+                        badBoy = "gay"
+                        break
+                for keyword in swear:
+                    if keyword in message.content.lower():
+                        badBoy = "bad"
+                        break
+                if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
+                    await self.insult.paw_insult(message)
+                else:
+                    await self.bot.send_message(message.channel, randchoice(suspicious))
         previous = message.content
         reply = ""
             

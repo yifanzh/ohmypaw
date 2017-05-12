@@ -27,6 +27,12 @@ class Insult:
         else:
             await self.bot.say(ctx.message.author.mention + msg + randchoice(self.insults))
 
+    async def paw_insult(self, message):
+        """Insult the user"""
+
+        msg = ''
+        await self.bot.send_message(message.channel, message.author.mention + msg + randchoice(self.insults))
+
 
 def check_folders():
     folders = ("data", "data/insult/")
