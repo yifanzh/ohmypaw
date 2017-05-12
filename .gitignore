@@ -1,4 +1,4 @@
-*.json
+data/red/settings.json
 *.pyc
 __pycache__
 lib/

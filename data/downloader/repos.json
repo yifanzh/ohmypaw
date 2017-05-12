@@ -1,0 +1,255 @@
+{
+    "26-Cogs" : {
+        "cleverbot" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\26-Cogs\\cleverbot\\cleverbot.py",
+            "folder" : "data\\downloader\\26-Cogs\\cleverbot"
+        },
+        "insult" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\26-Cogs\\insult\\insult.py",
+            "folder" : "data\\downloader\\26-Cogs\\insult"
+        },
+        "nomassmentions" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\26-Cogs\\nomassmentions\\nomassmentions.py",
+            "folder" : "data\\downloader\\26-Cogs\\nomassmentions"
+        },
+        "penis" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\26-Cogs\\penis\\penis.py",
+            "folder" : "data\\downloader\\26-Cogs\\penis"
+        },
+        "remindme" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\26-Cogs\\remindme\\remindme.py",
+            "folder" : "data\\downloader\\26-Cogs\\remindme"
+        },
+        "rift" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\26-Cogs\\rift\\rift.py",
+            "folder" : "data\\downloader\\26-Cogs\\rift"
+        },
+        "rndstatus" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\26-Cogs\\rndstatus\\rndstatus.py",
+            "folder" : "data\\downloader\\26-Cogs\\rndstatus"
+        },
+        "stickyroles" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\26-Cogs\\stickyroles\\stickyroles.py",
+            "folder" : "data\\downloader\\26-Cogs\\stickyroles"
+        },
+        "trigger" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\26-Cogs\\trigger\\trigger.py",
+            "folder" : "data\\downloader\\26-Cogs\\trigger"
+        },
+        "url" : "https://github.com/Twentysix26/26-Cogs"
+    },
+    "Dusty-Cogs" : {
+        "autorole" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\Dusty-Cogs\\autorole\\autorole.py",
+            "folder" : "data\\downloader\\Dusty-Cogs\\autorole"
+        },
+        "desutils" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Dusty-Cogs\\desutils\\desutils.py",
+            "folder" : "data\\downloader\\Dusty-Cogs\\desutils"
+        },
+        "greet" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Dusty-Cogs\\greet\\greet.py",
+            "folder" : "data\\downloader\\Dusty-Cogs\\greet"
+        },
+        "menu" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Dusty-Cogs\\menu\\menu.py",
+            "folder" : "data\\downloader\\Dusty-Cogs\\menu"
+        },
+        "moji" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Dusty-Cogs\\moji\\moji.py",
+            "folder" : "data\\downloader\\Dusty-Cogs\\moji"
+        },
+        "pathfinder" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Dusty-Cogs\\pathfinder\\pathfinder.py",
+            "folder" : "data\\downloader\\Dusty-Cogs\\pathfinder"
+        },
+        "requester" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Dusty-Cogs\\requester\\requester.py",
+            "folder" : "data\\downloader\\Dusty-Cogs\\requester"
+        },
+        "url" : "https://github.com/Lunar-Dust/Dusty-Cogs"
+    },
+    "FlapJack-Cogs" : {
+        "blizzard" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\FlapJack-Cogs\\blizzard\\blizzard.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\blizzard"
+        },
+        "colorme" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\colorme\\colorme.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\colorme"
+        },
+        "defcon" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\defcon\\defcon.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\defcon"
+        },
+        "dongers" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\dongers\\dongers.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\dongers"
+        },
+        "msgvote" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\msgvote\\msgvote.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\msgvote"
+        },
+        "reactpoll" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\reactpoll\\reactpoll.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\reactpoll"
+        },
+        "sfx" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\sfx\\sfx.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\sfx"
+        },
+        "smartreact" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\smartreact\\smartreact.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\smartreact"
+        },
+        "smite" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\smite\\smite.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\smite"
+        },
+        "spoiler" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\spoiler\\spoiler.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\spoiler"
+        },
+        "url" : "https://github.com/flapjax/FlapJack-Cogs",
+        "wat" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\FlapJack-Cogs\\wat\\wat.py",
+            "folder" : "data\\downloader\\FlapJack-Cogs\\wat"
+        }
+    },
+    "Neko-Cogs" : {
+        "Nookpedia" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\Nookpedia\\Nookpedia.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\Nookpedia"
+        },
+        "Q20" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\Q20\\Q20.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\Q20"
+        },
+        "account" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\account\\account.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\account"
+        },
+        "botstats" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\botstats\\botstats.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\botstats"
+        },
+        "customhelp" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\customhelp\\customhelp.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\customhelp"
+        },
+        "fuck" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\Neko-Cogs\\fuck\\fuck.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\fuck"
+        },
+        "getfortune" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\getfortune\\getfortune.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\getfortune"
+        },
+        "news" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\news\\news.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\news"
+        },
+        "onjoin" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\onjoin\\onjoin.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\onjoin"
+        },
+        "pressf" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\pressf\\pressf.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\pressf"
+        },
+        "selfembed" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\selfembed\\selfembed.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\selfembed"
+        },
+        "transformice" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\Neko-Cogs\\transformice\\transformice.py",
+            "folder" : "data\\downloader\\Neko-Cogs\\transformice"
+        },
+        "url" : "https://github.com/NekoTony/Neko-Cogs"
+    },
+    "ORELS-Cogs" : {
+        "apitools" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\ORELS-Cogs\\apitools\\apitools.py",
+            "folder" : "data\\downloader\\ORELS-Cogs\\apitools"
+        },
+        "dota" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\ORELS-Cogs\\dota\\dota.py",
+            "folder" : "data\\downloader\\ORELS-Cogs\\dota"
+        },
+        "drawing" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\ORELS-Cogs\\drawing\\drawing.py",
+            "folder" : "data\\downloader\\ORELS-Cogs\\drawing"
+        },
+        "fetch" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\ORELS-Cogs\\fetch\\fetch.py",
+            "folder" : "data\\downloader\\ORELS-Cogs\\fetch"
+        },
+        "gaming" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\ORELS-Cogs\\gaming\\gaming.py",
+            "folder" : "data\\downloader\\ORELS-Cogs\\gaming"
+        },
+        "roller" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\ORELS-Cogs\\roller\\roller.py",
+            "folder" : "data\\downloader\\ORELS-Cogs\\roller"
+        },
+        "steam" : {
+            "INSTALLED" : false,
+            "file" : "data\\downloader\\ORELS-Cogs\\steam\\steam.py",
+            "folder" : "data\\downloader\\ORELS-Cogs\\steam"
+        },
+        "url" : "https://github.com/orels1/ORELS-Cogs"
+    },
+    "Red-Portal-Cogs" : {
+        "redportal" : {
+            "INSTALLED" : true,
+            "file" : "data\\downloader\\Red-Portal-Cogs\\redportal\\redportal.py",
+            "folder" : "data\\downloader\\Red-Portal-Cogs\\redportal"
+        },
+        "url" : "https://github.com/orels1/Red-Portal-Cogs"
+    }
+}
