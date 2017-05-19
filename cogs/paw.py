@@ -79,6 +79,9 @@ class Paw:
                     if keyword in message.content.lower():
                         badBoy = "bad"
                         break
+                if "奶" in message.content:
+                    await self.bot.send_message(message.channel, "奶奶奶。。。奶死你！！！")
+                    return
                 if "我要听故事" in message.content.lower():
                     await self.bot.send_message(message.channel, randchoice(stories))
                 elif "是不是" in message.content.lower() or ("是" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
