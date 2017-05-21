@@ -9,6 +9,8 @@ import time
 import os
 import asyncio
 import chardet
+import csv
+import random
 
 DEFAULTS = {"MAX_SCORE"    : 10,
             "TIMEOUT"      : 120,
@@ -151,9 +153,35 @@ class Trivia:
         else:
             await self.bot.say("There are no trivia lists available.")
 
+    def parse_jeopardy(self):
+        path = "data/trivia/jeopardy.csv"
+        parsed_list = {}
+        print("Special routine for jeopardy parsing")
+
+        encoding = "ISO-8859-1"
+        print("encoding detected")
+
+        with open(path, "r", encoding=encoding) as f:
+            reader = csv.reader(f)
+            counter = 0
+            print("csv loop started")
+            for row in reader:
+                parsed_list[counter] = TriviaLine(question="\n".join(row[:-1]).strip(), answers=[row[-1]])
+                counter = counter + 1
+
+        if not parsed_list:
+            raise ValueError("Empty trivia list")
+
+        print("done")
+        return parsed_list
+
     def parse_trivia_list(self, filename):
+        if filename == "jeopardy":
+            return self.parse_jeopardy()
+
+        print("parsing ordinary trivia txt")
         path = "data/trivia/{}.txt".format(filename)
-        parsed_list = []
+        parsed_list = {}
 
         with open(path, "rb") as f:
             try:
@@ -164,6 +192,7 @@ class Trivia:
         with open(path, "r", encoding=encoding) as f:
             trivia_list = f.readlines()
 
+        counter = 0
         for line in trivia_list:
             if "`" not in line:
                 continue
@@ -175,7 +204,9 @@ class Trivia:
                 answers.append(l.strip())
             if len(line) >= 2 and question and answers:
                 line = TriviaLine(question=question, answers=answers)
-                parsed_list.append(line)
+                #parsed_list.append(line)
+                parsed_list[counter] = line
+                counter = counter + 1
 
         if not parsed_list:
             raise ValueError("Empty trivia list")
@@ -204,6 +235,7 @@ class Trivia:
 
 class TriviaSession():
     def __init__(self, bot, trivia_list, message, settings):
+        print("starting trivia ")
         self.bot = bot
         self.reveal_messages = ("I know this one! {}!",
                                 "Easy: {}.",
@@ -234,15 +266,20 @@ class TriviaSession():
         self.bot.dispatch("trivia_end", self)
 
     async def new_question(self):
+        print("Generating next question")
         for score in self.scores.values():
             if score == self.settings["MAX_SCORE"]:
                 await self.end_game()
                 return True
-        if self.question_list == []:
+        if self.question_list == {}:
             await self.end_game()
             return True
-        self.current_line = choice(self.question_list)
-        self.question_list.remove(self.current_line)
+        print("Making a random selection")
+        nq = random.randint(0,len(self.question_list) - 1)
+        self.current_line = self.question_list[nq] # select a question from remaining pool TODO
+        print("Selected")
+        #self.question_list.remove(self.current_line) # remove it from the pool
+        del self.question_list[nq]
         self.status = "waiting for answer"
         self.count += 1
         self.timer = int(time.perf_counter())
