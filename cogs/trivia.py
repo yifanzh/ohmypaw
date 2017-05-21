@@ -11,6 +11,7 @@ import asyncio
 import chardet
 import csv
 import random
+from randomdict import RandomDict
 
 DEFAULTS = {"MAX_SCORE"    : 10,
             "TIMEOUT"      : 120,
@@ -155,7 +156,7 @@ class Trivia:
 
     def parse_jeopardy(self):
         path = "data/trivia/jeopardy.csv"
-        parsed_list = {}
+        parsed_list = RandomDict()
         print("Special routine for jeopardy parsing")
 
         encoding = "ISO-8859-1"
@@ -181,7 +182,7 @@ class Trivia:
 
         print("parsing ordinary trivia txt")
         path = "data/trivia/{}.txt".format(filename)
-        parsed_list = {}
+        parsed_list = RandomDict()
 
         with open(path, "rb") as f:
             try:
@@ -275,11 +276,11 @@ class TriviaSession():
             await self.end_game()
             return True
         print("Making a random selection")
-        nq = random.randint(0,len(self.question_list) - 1)
-        self.current_line = self.question_list[nq] # select a question from remaining pool TODO
+        nk = self.question_list.random_key()
+        self.current_line = sel.question_list[nk] # select a question from remaining pool
         print("Selected")
         #self.question_list.remove(self.current_line) # remove it from the pool
-        del self.question_list[nq]
+        del self.question_list[nk]
         self.status = "waiting for answer"
         self.count += 1
         self.timer = int(time.perf_counter())
