@@ -340,6 +340,8 @@ class TriviaSession():
             else:  # The answer has spaces, we can't be as strict
                 if answer in guess:
                     has_guessed = True
+            if len(guess) >= 4 and guess in answer: # more relaxed, partial matching; 4 because we don't want every letter to be considered correct
+                has_guess=True
 
         if has_guessed:
             self.current_line = None
