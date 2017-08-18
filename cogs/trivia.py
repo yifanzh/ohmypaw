@@ -277,7 +277,7 @@ class TriviaSession():
             return True
         print("Making a random selection")
         nk = self.question_list.random_key()
-        self.current_line = sel.question_list[nk] # select a question from remaining pool
+        self.current_line = self.question_list[nk] # select a question from remaining pool
         print("Selected")
         #self.question_list.remove(self.current_line) # remove it from the pool
         del self.question_list[nk]

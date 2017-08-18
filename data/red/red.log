@@ -1378,3 +1378,801 @@ Traceback (most recent call last):
 AttributeError: 'VoiceClient' object has no attribute 'audio_player'
 [12/05/2017 00:36] INFO economy transfer 352: Givemepaw(215674658530394112) transferred 500 credits to chopperdamus(221334564985896960)
 [12/05/2017 19:46] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 500 credits to Givemepaw(215674658530394112)
+[12/05/2017 22:08] ERROR red load_cogs 573: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Bot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Bot\Red-DiscordBot\cogs\insult.py", line 61, in setup
+    n = Insult(bot)
+  File "C:\Bot\Red-DiscordBot\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 315, in loads
+    s, 0)
+json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+[12/05/2017 22:08] ERROR red load_cogs 573: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Bot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Bot\Red-DiscordBot\cogs\paw.py", line 214, in setup
+    bot.add_cog(Paw(bot))
+  File "C:\Bot\Red-DiscordBot\cogs\paw.py", line 47, in __init__
+    self.insult = Insult(bot)
+  File "C:\Bot\Red-DiscordBot\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 315, in loads
+    s, 0)
+json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+[12/05/2017 22:09] ERROR owner load 73: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Bot\Red-DiscordBot\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "C:\Bot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Bot\Red-DiscordBot\cogs\paw.py", line 214, in setup
+    bot.add_cog(Paw(bot))
+  File "C:\Bot\Red-DiscordBot\cogs\paw.py", line 47, in __init__
+    self.insult = Insult(bot)
+  File "C:\Bot\Red-DiscordBot\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Bot\Red-DiscordBot\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 315, in loads
+    s, 0)
+json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+[12/05/2017 23:51] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 100 credits to Cielyc(211318304965394442)
+[13/05/2017 00:05] INFO economy transfer 352: chopperdamus(221334564985896960) transferred 1 credits to Danker(236290760662581249)
+[13/05/2017 00:05] INFO economy transfer 352: Danker(236290760662581249) transferred 1 credits to chopperdamus(221334564985896960)
+[13/05/2017 00:18] INFO economy _set 393: chopperdamus(221334564985896960) set 100000 credits to chopperdamus (221334564985896960)
+[13/05/2017 00:18] INFO economy _set 393: chopperdamus(221334564985896960) set 0 credits to chopperdamus (221334564985896960)
+[18/05/2017 21:56] ERROR red on_command_error 369: Exception in command 'slot'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\economy.py", line 549, in slot
+    await self.slot_machine(author, bid)
+  File "C:\Bot\Red-DiscordBot\cogs\economy.py", line 613, in slot_machine
+    "".format(slot, author.mention, bid, then, now))
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[18/05/2017 22:52] WARNING audio _play 814: I can't play URL below because it is too long. Use [p]audioset maxlength to change this.
+
+[SEARCH:]囧
+[21/05/2017 01:27] ERROR red on_command_error 369: Exception in command 'trivia'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 112, in trivia
+    await t.new_question()
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 315, in new_question
+    await self.new_question()
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 299, in new_question
+    await self.new_question()
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 315, in new_question
+    await self.new_question()
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 299, in new_question
+    await self.new_question()
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 279, in new_question
+    self.current_line = self.question_list[nq] # select a question from remaining pool TODO
+KeyError: 165
+[21/05/2017 01:42] ERROR red on_command_error 369: Exception in command 'trivia'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 113, in trivia
+    await t.new_question()
+  File "C:\Bot\Red-DiscordBot\cogs\trivia.py", line 280, in new_question
+    self.current_line = sel.question_list[nk] # select a question from remaining pool
+NameError: name 'sel' is not defined
+[22/05/2017 00:57] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[23/05/2017 08:29] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[23/05/2017 08:38] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[23/05/2017 08:38] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[28/05/2017 22:30] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1344, in play
+    self.has_connect_perm(author, server)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 2016, in has_connect_perm
+    raise AuthorNotConnected
+cogs.audio.AuthorNotConnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1346, in play
+    await self.bot.say("You must join a voice channel before I can"
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[01/06/2017 00:12] ERROR red on_command_error 369: Exception in command 'skip'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1790, in skip
+    await self.bot.say("Skipping...")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[02/06/2017 20:17] ERROR red on_command_error 369: Exception in command 'stop'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1893, in stop
+    await self.bot.say('Stopping...')
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 01:28] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 01:28] ERROR red on_command_error 369: Exception in command 'penis'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\penis.py", line 20, in penis
+    await self.bot.say("Size: " + dong)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 01:34] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 01:35] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 01:36] ERROR red on_command_error 369: Exception in command 'skip'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1816, in skip
+    await self.bot.reply(reply)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 01:36] ERROR red on_command_error 369: Exception in command 'stop'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1896, in stop
+    await self.bot.say("You can't stop music when there are other"
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 01:37] ERROR red on_command_error 369: Exception in command 'playlist'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1426, in playlist
+    await send_cmd_help(ctx)
+  File "red.py", line 141, in send_cmd_help
+    await self.send_message(ctx.message.channel, page)
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[12/06/2017 20:30] WARNING audio _play 814: I can't play URL below because it is too long. Use [p]audioset maxlength to change this.
+
+[SEARCH:]雙笙（2小時_25首）
+[15/06/2017 06:34] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1338, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1665, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[20/06/2017 02:16] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1444, in lickpaw
+    await self._play(server, "11.mp3");
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 825, in _play
+    local=local)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 378, in _create_ffmpeg_player
+    voice_channel_id = self.queue[server.id]["VOICE_CHANNEL_ID"]
+KeyError: '204851078578044929'
+[20/06/2017 02:29] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1445, in lickpaw
+    self._add_to_queue(server, "lickpaw/{}.mp3".format(random.randint(1, 28)))
+NameError: name 'random' is not defined
+[20/06/2017 02:45] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[20/06/2017 02:45] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[20/06/2017 02:45] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[23/06/2017 19:55] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[23/06/2017 19:56] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[24/06/2017 00:20] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1404, in lickpaw
+    self.has_connect_perm(author, server)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 2073, in has_connect_perm
+    raise UnauthorizedConnect
+cogs.audio.AuthorNotConnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1406, in lickpaw
+    await self.bot.say("You must join a voice channel before I can"
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[24/06/2017 04:28] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[24/06/2017 04:29] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[24/06/2017 04:29] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[04/07/2017 03:16] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1339, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1720, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[06/07/2017 06:00] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1339, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1720, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[06/07/2017 06:00] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[06/07/2017 06:01] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[06/07/2017 06:04] ERROR red on_command_error 369: Exception in command 'play'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1339, in play
+    await ctx.invoke(self._queue, url=url)
+  File "lib\discord\ext\commands\context.py", line 112, in invoke
+    ret = yield from command.callback(*arguments, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1720, in _queue
+    await self.bot.say("Queued.")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[06/07/2017 07:02] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1404, in lickpaw
+    self.has_connect_perm(author, server)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 2071, in has_connect_perm
+    raise AuthorNotConnected
+cogs.audio.AuthorNotConnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1406, in lickpaw
+    await self.bot.say("You must join a voice channel before I can"
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[02/08/2017 01:01] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[02/08/2017 02:06] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[02/08/2017 02:06] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[02/08/2017 03:21] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1404, in lickpaw
+    self.has_connect_perm(author, server)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 2071, in has_connect_perm
+    raise AuthorNotConnected
+cogs.audio.AuthorNotConnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1406, in lickpaw
+    await self.bot.say("You must join a voice channel before I can"
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[16/08/2017 03:58] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[16/08/2017 04:12] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[16/08/2017 04:12] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[16/08/2017 04:12] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Bot\Red-DiscordBot\cogs\audio.py", line 1429, in lickpaw
+    await self.bot.say("I'm already playing a song on this server!")
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 196, in request
+    raise Forbidden(r, data)
+discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
+[18/08/2017 03:31] WARNING audio _play 815: I can't play URL below because it is too long. Use [p]audioset maxlength to change this.
+
+[SEARCH:]Звезда

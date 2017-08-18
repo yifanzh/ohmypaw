@@ -5,7 +5,7 @@
     "SERVERS" : {
         "204851078578044929" : {
             "NOPPL_DISCONNECT" : true,
-            "VOLUME" : 5,
+            "VOLUME" : 45,
             "VOTE_ENABLED" : true,
             "VOTE_THRESHOLD" : 50
         }
