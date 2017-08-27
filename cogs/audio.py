@@ -1495,7 +1495,7 @@ class Audio:
             await self.bot.say("Local playlist not found.")
             return
 
-        self._add_to_queue(server, "lickpaw/{}.mp3".format(random.randint(1, 28)))
+        self._add_to_queue(server, "lickpaw/{}.mp3".format(random.randint(1, 62)))
 
     @commands.command(pass_context=True, no_pm=True)
     async def prev(self, ctx):
