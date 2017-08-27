@@ -1444,7 +1444,7 @@ class Audio:
         self._add_to_queue(server, "kaizong/kaizong_lesson_{}.opus".format(random.randint(1, 1)))
 
     @commands.command(pass_context=True, no_pm=True)
-    async def lickpaw(self, ctx):
+    async def lickpaw(self, ctx, *, filename=""):
         server = ctx.message.server
         author = ctx.message.author
         voice_channel = author.voice_channel
@@ -1476,26 +1476,20 @@ class Audio:
             if self.voice_client(server).channel != voice_channel:
                 pass  # TODO: Perms
 
-        # Checking if playing in current server
-
-        if self.is_playing(server):
-            await self.bot.say("I'm already playing a song on this server!")
-            return  # TODO: Possibly execute queue?
-
-        # If not playing, spawn a downloader if it doesn't exist and begin
-        #   downloading the next song
-
-        if self.currently_downloading(server):
-            await self.bot.say("I'm already downloading a file!")
-            return
-
         lists = self._list_local_playlists()
 
         if not any(map(lambda l: os.path.split(l)[1] == name, lists)):
             await self.bot.say("Local playlist not found.")
             return
 
-        self._add_to_queue(server, "lickpaw/{}.mp3".format(random.randint(1, 62)))
+        if filename == "":
+            self._add_to_queue(server, "lickpaw/{}.mp3".format(random.randint(1, 62)))
+        elif not os.path.isfile(os.path.join(self.local_playlist_path, "lickpaw/{}.mp3".format(filename))):
+            await self.bot.say("{}.mp3 not found.".format(filename))
+            return
+        else:
+            self._add_to_queue(server, "lickpaw/{}.mp3".format(filename))
+
 
     @commands.command(pass_context=True, no_pm=True)
     async def prev(self, ctx):
