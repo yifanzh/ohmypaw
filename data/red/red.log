@@ -2176,3 +2176,138 @@ discord.errors.Forbidden: FORBIDDEN (status code: 403): Missing Permissions
 [18/08/2017 03:31] WARNING audio _play 815: I can't play URL below because it is too long. Use [p]audioset maxlength to change this.
 
 [SEARCH:]Звезда
+[27/08/2017 17:26] ERROR red load_cogs 573: Make sure beautifulsoup4 and bleach are installed.
+`pip install beautifulsoup4`
+`pip install bleach`
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\blizzard.py", line 647, in setup
+    raise RuntimeError(error_text)
+RuntimeError: Make sure beautifulsoup4 and bleach are installed.
+`pip install beautifulsoup4`
+`pip install bleach`
+[27/08/2017 17:41] ERROR owner load 73: __init__() missing 1 required positional argument: 'player'
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 219, in setup
+    bot.add_cog(Paw(bot))
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 49, in __init__
+    self.lickpaw = Audio(bot)
+TypeError: __init__() missing 1 required positional argument: 'player'
+[27/08/2017 17:42] ERROR owner load 73: __init__() missing 1 required positional argument: 'player'
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 219, in setup
+    bot.add_cog(Paw(bot))
+TypeError: __init__() missing 1 required positional argument: 'player'
+[27/08/2017 17:48] ERROR owner load 73: __init__() missing 1 required positional argument: 'player'
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 220, in setup
+    bot.add_cog(Paw(bot))
+TypeError: __init__() missing 1 required positional argument: 'player'
+[27/08/2017 17:49] ERROR owner load 73: __init__() missing 1 required positional argument: 'player'
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 220, in setup
+    bot.add_cog(Paw(bot))
+TypeError: __init__() missing 1 required positional argument: 'player'
+[27/08/2017 17:56] ERROR owner load 73: No module named 'audio'
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Wei\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 8, in <module>
+    import audio
+ModuleNotFoundError: No module named 'audio'
+[27/08/2017 17:56] ERROR owner load 68: ('invalid syntax', ('E:\\Programming\\ohmypaw\\cogs\\paw.py', 8, 8, 'import .audio\n'))
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Wei\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 8
+    import .audio
+           ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('E:\\Programming\\ohmypaw\\cogs\\paw.py', 8, 8, 'import .audio\n'))
+[27/08/2017 19:14] ERROR owner load 73: cannot import name '_list_local_playlists'
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Wei\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 978, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 961, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 7, in <module>
+    from .audio import _list_local_playlists
+ImportError: cannot import name '_list_local_playlists'
+[27/08/2017 19:29] ERROR owner load 73: name 'player' is not defined
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 218, in setup
+    bot.add_cog(Paw(bot))
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 50, in __init__
+    self.lick = Audio(bot, player)
+NameError: name 'player' is not defined

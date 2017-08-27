@@ -3,7 +3,7 @@
     "cogs.ass" : true,
     "cogs.audio" : true,
     "cogs.autorole" : true,
-    "cogs.blizzard" : true,
+    "cogs.blizzard" : false,
     "cogs.cleverbot" : false,
     "cogs.customcom" : true,
     "cogs.downloader" : true,
