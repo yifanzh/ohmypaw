@@ -1501,19 +1501,19 @@ class Audio:
             try:
                 self.has_connect_perm(author, server)
             except AuthorNotConnected:
-                await self.bot.say("You must join a voice channel before I can"
+                log.warn("You must join a voice channel before I can"
                                    " play anything.")
                 return
             except UnauthorizedConnect:
-                await self.bot.say("I don't have permissions to join your"
+                log.warn("I don't have permissions to join your"
                                    " voice channel.")
                 return
             except UnauthorizedSpeak:
-                await self.bot.say("I don't have permissions to speak in your"
+                log.warn("I don't have permissions to speak in your"
                                    " voice channel.")
                 return
             except ChannelUserLimit:
-                await self.bot.say("Your voice channel is full.")
+                log.warn("Your voice channel is full.")
                 return
             else:
                 await self._join_voice_channel(voice_channel)
@@ -1521,6 +1521,10 @@ class Audio:
             if self.voice_client(server).channel != voice_channel:
                 pass  # TODO: Perms
             
+        if self.is_playing(server):
+            log.warn("I'm already playing a song on this server!")
+            return  # TODO: Possibly execute queue?
+
         try:
             song = self._make_local_song(url)
             local = True
