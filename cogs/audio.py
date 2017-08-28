@@ -1492,19 +1492,43 @@ class Audio:
      
     async def lick_paw(self, message, url):
         server = message.server
-        voice_channel = message.author.voice_channel
+        author = message.author
+        voice_channel = author.voice_channel
         self._setup_queue(server)
         self.queue[server.id]["VOICE_CHANNEL_ID"] = voice_channel.id
         """Returns the song object of what's playing"""
-
+        if not self.voice_connected(server):
+            try:
+                self.has_connect_perm(author, server)
+            except AuthorNotConnected:
+                await self.bot.say("You must join a voice channel before I can"
+                                   " play anything.")
+                return
+            except UnauthorizedConnect:
+                await self.bot.say("I don't have permissions to join your"
+                                   " voice channel.")
+                return
+            except UnauthorizedSpeak:
+                await self.bot.say("I don't have permissions to speak in your"
+                                   " voice channel.")
+                return
+            except ChannelUserLimit:
+                await self.bot.say("Your voice channel is full.")
+                return
+            else:
+                await self._join_voice_channel(voice_channel)
+        else:  # We are connected but not to the right channel
+            if self.voice_client(server).channel != voice_channel:
+                pass  # TODO: Perms
+            
         try:
             song = self._make_local_song(url)
             local = True
         except FileNotFoundError:
             raise
 
-        voice_client = await self._create_ffmpeg_player(server, song.id,
-                                                        local=local)
+        voice_client = await self._create_ffmpeg_player(server, song.id,local=local)
+        
         # That ^ creates the audio_player property
 
         voice_client.audio_player.start()

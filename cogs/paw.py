@@ -4,7 +4,7 @@ from discord.ext import commands
 from .insult import Insult
 import collections
 from .audio import Audio
-from .audio import verify_ffmpeg_avconv
+import random
 from cogs.utils.dataIO import dataIO
 from .utils.dataIO import fileIO
 import subprocess
@@ -50,8 +50,8 @@ class Paw:
     
     def __init__(self, bot):
         self.bot = bot
-        self.insult = Insult(bot)
-        self.lick = Audio(bot, player=verify_ffmpeg_avconv())
+        self.insult = self.bot.get_cog("Insult")
+        self.lick = self.bot.get_cog("Audio")
 
 
     async def on_message(self, message):
@@ -66,10 +66,9 @@ class Paw:
             elif "有人吗" in message.content or "在吗" in message.content or "在么" in message.content or "有人么" in message.content:
                 await self.bot.send_message(message.channel, "我在这")
                 await self.bot.send_message(message.channel, randchoice(greets))
-            elif message.content.lower() == "paw" or message.content == "小爪" or message.content == "大鸡吧酱" or message.content == "弱鸡爪" or message.content == "爪" or message.content == "爪妹妹" or message.content == "爪爪":
+            elif message.content.lower() == "paw" or message.content == "小爪" or message.content == "大鸡吧酱" or message.content == "弱鸡爪" or message.content == "爪" or message.content == "爪妹" or message.content == "爪爪":
                 if sender.name in names:
-                    await self.bot.send_message(message.channel, message.server.id)
-                    await self.lick.lick_paw(message, "lickpaw/1.mp3")
+                    await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(random.randint(1, 62)))
                 else:
                     await self.bot.send_message(message.channel, "我不认识你")
             elif message.content.startswith("paw") or message.content.startswith("小爪") or message.content.startswith("大鸡吧酱") or message.content.startswith("弱鸡爪") or message.content.startswith("爪"):
@@ -137,7 +136,7 @@ class Paw:
                     await self.bot.send_message(message.channel, reply)
                 elif badBoy == "good":
                     await self.bot.send_message(message.channel, randchoice(greets))
-            elif previous.lower() == "paw" or previous == "小爪" or previous == "大鸡吧酱" or previous == "弱鸡爪" or previous == "爪" or previous == "爪妹妹":
+            elif previous.lower() == "paw" or previous == "小爪" or previous == "大鸡吧酱" or previous == "弱鸡爪" or previous == "爪" or previous == "爪妹":
                 badBoy = "good"
                 for keyword in dirty:
                     if keyword in message.content.lower():
