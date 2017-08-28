@@ -2,13 +2,17 @@ import discord
 from random import choice as randchoice
 from discord.ext import commands
 from .insult import Insult
+import collections
 from .audio import Audio
 from .audio import verify_ffmpeg_avconv
+from cogs.utils.dataIO import dataIO
 from .utils.dataIO import fileIO
+import subprocess
+import os
 
 greets = ["http://imgur.com/47vI9T5", "QwQ", "=w=" , "(:з」∠)", "=A=","http://imgur.com/Y5DMDqH", "昨天太近，明天太远，今天你有什么需要吗？"]
 names = {"Dragon":"爪公","Fangzhuan":"Gay砖","Baoz":"包子","Andrew":"Andrew","Givemepaw":"假小爪","hf":"贼神","ppadante":"弱鸡嫩","Cielyc":"欧皇","illidanaire":"王总","Maxxia":"Max","Vurtune":"凯总","chopper":"Chopper"
-,"Danker":"Danker","Miyano":"随老师","momotea":"momotea","Doombefall":"2k","Silentstorm":"Senpai","Mylei":"Emily","Zillidan":"Zach"}
+,"Danker":"Danker","Miyano":"随老师","momotea":"momotea","Doombefall":"2k","Silentstorm":"Senpai","Mylei":"Emily","Zillidan":"Zach","lm54484":"比利"}
 dirty = ["penis","ass","丁丁","鸡","菊花","vagina","打飞机","下面"]
 reply_to_dirty = ["太污了","有毒吧","你们太污了","不懂你们在说什么","我看不懂","你们有毒吧","...","哈?","啊?","妈个鸡","...","这帮傻屌..."]
 gay = ["喜欢","爱","上","fuck","干","舔","插","打炮","gay","基","爽","操","草","艹","肏"]
@@ -40,7 +44,7 @@ stories = ["你们知道公会建会成员都是谁吗？\n是Taleta(会长),Kai
 
 previous = ""
 reply =""
-         
+    
 class Paw:
     """General commands."""
     
@@ -48,6 +52,7 @@ class Paw:
         self.bot = bot
         self.insult = Insult(bot)
         self.lick = Audio(bot, player=verify_ffmpeg_avconv())
+
 
     async def on_message(self, message):
         global reply
@@ -63,7 +68,8 @@ class Paw:
                 await self.bot.send_message(message.channel, randchoice(greets))
             elif message.content.lower() == "paw" or message.content == "小爪" or message.content == "大鸡吧酱" or message.content == "弱鸡爪" or message.content == "爪" or message.content == "爪妹妹" or message.content == "爪爪":
                 if sender.name in names:
-                    await self.lick.lick_paw(message)
+                    await self.bot.send_message(message.channel, message.server.id)
+                    await self.lick.lick_paw(message, "lickpaw/1.mp3")
                 else:
                     await self.bot.send_message(message.channel, "我不认识你")
             elif message.content.startswith("paw") or message.content.startswith("小爪") or message.content.startswith("大鸡吧酱") or message.content.startswith("弱鸡爪") or message.content.startswith("爪"):

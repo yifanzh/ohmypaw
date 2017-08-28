@@ -2311,3 +2311,65 @@ Traceback (most recent call last):
   File "E:\Programming\ohmypaw\cogs\paw.py", line 50, in __init__
     self.lick = Audio(bot, player)
 NameError: name 'player' is not defined
+[27/08/2017 20:47] ERROR owner load 73: name 'collections' is not defined
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 224, in setup
+    bot.add_cog(Paw(bot))
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 55, in __init__
+    self.deque = deque(collections.deque)
+NameError: name 'collections' is not defined
+[27/08/2017 20:48] ERROR owner load 73: 'type' object is not iterable
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "E:\Programming\ohmypaw\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 225, in setup
+    bot.add_cog(Paw(bot))
+  File "E:\Programming\ohmypaw\cogs\paw.py", line 56, in __init__
+    self.deque = deque(collections.deque)
+  File "E:\Programming\ohmypaw\cogs\audio.py", line 111, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: 'type' object is not iterable
+[27/08/2017 21:09] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "E:\Programming\ohmypaw\cogs\audio.py", line 1486, in lickpaw
+    local=True)
+  File "E:\Programming\ohmypaw\cogs\audio.py", line 376, in _create_ffmpeg_player
+    voice_channel_id = self.queue[server.id]["VOICE_CHANNEL_ID"]
+KeyError: '310295477587279872'
+[27/08/2017 21:32] ERROR audio _join_voice_channel 645: 
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\audio.py", line 643, in _join_voice_channel
+    timeout=5, loop=self.bot.loop)
+  File "C:\Users\Wei\AppData\Local\Programs\Python\Python36-32\lib\asyncio\tasks.py", line 362, in wait_for
+    raise futures.TimeoutError()
+concurrent.futures._base.TimeoutError
+[27/08/2017 21:32] ERROR red on_command_error 369: Exception in command 'lickpaw'
+Traceback (most recent call last):
+  File "E:\Programming\ohmypaw\cogs\audio.py", line 643, in _join_voice_channel
+    timeout=5, loop=self.bot.loop)
+  File "C:\Users\Wei\AppData\Local\Programs\Python\Python36-32\lib\asyncio\tasks.py", line 362, in wait_for
+    raise futures.TimeoutError()
+concurrent.futures._base.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "E:\Programming\ohmypaw\cogs\audio.py", line 1474, in lickpaw
+    await self._join_voice_channel(voice_channel)
+  File "E:\Programming\ohmypaw\cogs\audio.py", line 647, in _join_voice_channel
+    raise ConnectTimeout("We timed out connecting to a voice channel,"
+cogs.audio.ConnectTimeout: We timed out connecting to a voice channel, please try again in 10 minutes.

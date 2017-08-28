@@ -388,7 +388,7 @@ class Audio:
             log.debug("valid reconnect channel for sid"
                       " {}, reconnecting...".format(server.id))
             await self._join_voice_channel(to_connect)  # SHIT
-        elif voice_client.channel.id != voice_channel_id:
+        elif voice_client.channel.id == voice_channel_id:
             # This was decided at 3:45 EST in #advanced-testing by 26
             self.queue[server.id]["VOICE_CHANNEL_ID"] = voice_client.channel.id
             log.debug("reconnect chan id for sid {} is wrong, fixing".format(
@@ -1490,50 +1490,27 @@ class Audio:
         else:
             self._add_to_queue(server, "lickpaw/{}.mp3".format(filename))
      
-    async def lick_paw(self, message, filename=""):
+    async def lick_paw(self, message, url):
         server = message.server
-        author = message.author
-        voice_channel = author.voice_channel
-        name = "lickpaw"
+        voice_channel = message.author.voice_channel
+        self._setup_queue(server)
+        self.queue[server.id]["VOICE_CHANNEL_ID"] = voice_channel.id
+        """Returns the song object of what's playing"""
 
-        # Checking already connected, will join if not
-        if not self.voice_connected(server):
-            try:
-                self.has_connect_perm(author, server)
-            except AuthorNotConnected:
-                await self.bot.say("You must join a voice channel before I can"
-                                   " play anything.")
-                return
-            except UnauthorizedConnect:
-                await self.bot.say("I don't have permissions to join your"
-                                   " voice channel.")
-                return
-            except UnauthorizedSpeak:
-                await self.bot.say("I don't have permissions to speak in your"
-                                   " voice channel.")
-                return
-            except ChannelUserLimit:
-                await self.bot.say("Your voice channel is full.")
-                return
-            else:
-                await self._join_voice_channel(voice_channel)
-        else:  # We are connected but not to the right channel
-            if self.voice_client(server).channel != voice_channel:
-                pass  # TODO: Perms
+        try:
+            song = self._make_local_song(url)
+            local = True
+        except FileNotFoundError:
+            raise
 
-        lists = self._list_local_playlists()
+        voice_client = await self._create_ffmpeg_player(server, song.id,
+                                                        local=local)
+        # That ^ creates the audio_player property
 
-        if not any(map(lambda l: os.path.split(l)[1] == name, lists)):
-            await self.bot.say("Local playlist not found.")
-            return
+        voice_client.audio_player.start()
+        log.debug("starting player on sid {}".format(server.id))
 
-        if filename == "":
-            self._add_to_queue(server, "lickpaw/{}.mp3".format(random.randint(1, 62)))
-        elif not os.path.isfile(os.path.join(self.local_playlist_path, "lickpaw/{}.mp3".format(filename))):
-            await self.bot.say("{}.mp3 not found.".format(filename))
-            return
-        else:
-            self._add_to_queue(server, "lickpaw/{}.mp3".format(filename))
+        return song
 
 
     @commands.command(pass_context=True, no_pm=True)
