@@ -5,3 +5,9 @@ lib/
 cache/
 *.exe
 *.dll
+data/audio/settings.json
+data/autorole/settings.json
+data/red/cogs.json
+data/red/red.log
+data/streams/picarto.json
+*.command
