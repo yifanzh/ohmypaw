@@ -112,9 +112,10 @@ class Paw:
         content = message.content
         content_all = "".join(content)
         print(content_all)
-        if previous.author != self.bot.user:
-            if previous.content.lower() == "paw" or previous.content == "小爪" or previous.content == "大鸡吧酱" or previous.content == "弱鸡爪" or previous.content == "爪" or previous.content == "爪妹":
-                content = "paw" + content
+        if previous != "":
+            if previous.author != self.bot.user:
+                if previous.content.lower() == "paw" or previous.content == "小爪" or previous.content == "大鸡吧酱" or previous.content == "弱鸡爪" or previous.content == "爪" or previous.content == "爪妹":
+                    content = "paw" + content
         if message.author != self.bot.user:
             sender = message.author
             if content.startswith("-"):
