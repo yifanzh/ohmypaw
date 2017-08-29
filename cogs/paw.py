@@ -100,9 +100,12 @@ class Paw:
                 if sender.name in names:
                     reply += names[sender.name]
                     reply += "，叫我干啥?"
-                    await self.bot.send_message(message.channel, reply)
                     if sender.name in voice_to_individual:
+                        await self.bot.send_message(message.channel, reply)
                         await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_to_individual[sender.name])))
+                    else:
+                        await self.bot.send_message(message.channel, reply)
+                        await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_greet)))
                 else:
                     await self.bot.send_message(message.channel, "我不认识你")
             elif content.startswith("paw") or content.startswith("小爪") or content.startswith("大鸡吧酱") or content.startswith("弱鸡爪") or content.startswith("爪"):
