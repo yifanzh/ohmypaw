@@ -198,8 +198,10 @@ class Paw:
             elif "paw" in content.lower() or "爪" in content:
                 reply_filename = self.parse_message(content_all)
                 await self.lick.lick_paw(message, reply_filename)
-                
-        previous = message.content
+
+        if message.author != self.bot.user:   
+            previous = message.content
+            
         reply = ""
             
 def setup(bot):
