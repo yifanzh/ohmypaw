@@ -20,7 +20,7 @@ gay = ["喜欢","爱","上","fuck","干","舔","插","打炮","gay","基","爽",
 reply_to_gay = ["你们这群gay","有毒吧","谁来把这人屏蔽了","...","傻逼吧","你们不要欺负我","调戏我的都是傻逼","别闹","窝要同归于尽 （举炸药包"]
 suspicious = ["你们不要说我坏话","我看见了我的名字","你们在说我什么","是在叫我吗"]
 who = ["gay","傻逼","汉子","妹子","丑逼","肥宅","傲娇","渣渣","女神","男神","土豪","基佬","阳痿","傻屌","武林高手","魔法少女","处男","荡妇","牛郎","AV女忧","孤儿","孙子","小屁孩","老板","大佬","穷逼","骚货","高手","交际花","单身狗"]
-swear = ["傻","逼","脑残","神经","白痴","蠢","stupid","asshole","bitch","笨","呆","二","贱"]
+swear = ["傻","逼","脑残","神经","白痴","蠢","stupid","asshole","bitch","笨","呆","二","贱","sb"]
 wow = ["wow","大米","魔兽","魔兽世界","公会","活动","副本","装备","橙装","地下城","raid"]
 pubg = ["吃鸡","枪法","盒","跳伞","大逃杀","pubg","老阴逼","刚枪","跑毒","天命"]
 
@@ -75,8 +75,8 @@ voice_list = [voice_greet, voice_amazed, voice_angry, voice_chicken, voice_cute,
 response1 = [voice_angry]
 response2 = [voice_angry, voice_sad, voice_dontcare]
 response3 = [voice_cute, voice_sad, voice_speechless, voice_laugh]
-response4 = [voice_raid]
-response5 = [voice_chicken]
+response4 = [voice_raid, voice_game]
+response5 = [voice_chicken, voice_game]
 response_list = [response1, response2, response3, response4, response5]
                        
 previous = ""
@@ -126,7 +126,6 @@ class Paw:
             elif "有人吗" in content or "在吗" in content or "在么" in content or "有人么" in content:
                 await self.bot.send_message(message.channel, "我在这")
                 await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_greet)))
-                await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_cute)))
             elif content.lower() == "paw" or content == "小爪" or content == "大鸡吧酱" or content == "弱鸡爪" or content == "爪" or content == "爪妹" or content == "爪爪":
                 if sender.name in names:
                     reply += names[sender.name]
