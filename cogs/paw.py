@@ -82,20 +82,21 @@ class Paw:
     async def on_message(self, message):
         global reply
         global previous
+        content = message.content
+        if previous.lower() == "paw" or previous == "小爪" or previous == "大鸡吧酱" or previous == "弱鸡爪" or previous == "爪" or previous == "爪妹":
+            content = "paw" + content
         if message.author != self.bot.user:
             sender = message.author
-            if message.content.startswith("-"):
+            if content.startswith("-"):
                 return
-            if message.content.lower() == "hello" or message.content == "greet" or message.content == "你好":
+            if content.lower() == "hello" or content == "greet" or content == "你好":
                 await self.bot.send_message(message.channel, randchoice(greets))
                 await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_greet)))
-            elif "有人吗" in message.content or "在吗" in message.content or "在么" in message.content or "有人么" in message.content:
+            elif "有人吗" in content or "在吗" in content or "在么" in content or "有人么" in content:
                 await self.bot.send_message(message.channel, "我在这")
                 await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_greet)))
                 await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_cute)))
-            elif previous.lower() == "paw" or previous == "小爪" or previous == "大鸡吧酱" or previous == "弱鸡爪" or previous == "爪" or previous == "爪妹":
-                message.content += "paw"
-            elif message.content.lower() == "paw" or message.content == "小爪" or message.content == "大鸡吧酱" or message.content == "弱鸡爪" or message.content == "爪" or message.content == "爪妹" or message.content == "爪爪":
+            elif content.lower() == "paw" or content == "小爪" or content == "大鸡吧酱" or content == "弱鸡爪" or content == "爪" or content == "爪妹" or content == "爪爪":
                 if sender.name in names:
                     reply += names[sender.name]
                     reply += "，叫我干啥?"
@@ -104,47 +105,47 @@ class Paw:
                         await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_to_individual[sender.name])))
                 else:
                     await self.bot.send_message(message.channel, "我不认识你")
-            elif message.content.startswith("paw") or message.content.startswith("小爪") or message.content.startswith("大鸡吧酱") or message.content.startswith("弱鸡爪") or message.content.startswith("爪"):
+            elif content.startswith("paw") or content.startswith("小爪") or content.startswith("大鸡吧酱") or content.startswith("弱鸡爪") or content.startswith("爪"):
                 badBoy = "good"
                 for keyword in dirty:
-                    if keyword in message.content.lower():
+                    if keyword in content.lower():
                         badBoy = "dirty"
                         break
                 for keyword in gay:
-                    if keyword in message.content.lower():
+                    if keyword in content.lower():
                         badBoy = "gay"
                         break
                 for keyword in swear:
-                    if keyword in message.content.lower():
+                    if keyword in content.lower():
                         badBoy = "bad"
                         break
-                if "奶" in message.content:
+                if "奶" in content:
                     await self.bot.send_message(message.channel, "奶奶奶。。。奶死你！！！")
-                if "吃鸡" in message.content:
+                if "吃鸡" in content:
                     await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_chicken)))
-                if "打团" in message.content.lower():
+                if "打团" in content.lower():
                     await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_raid)))
-                if "干吗" in message.content.lower():
+                if "干吗" in content.lower():
                     await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_random)))
-                if "我要听故事" in message.content.lower():
+                if "我要听故事" in content.lower():
                     await self.bot.send_message(message.channel, randchoice(stories))
-                if "声音" in message.content.lower():
+                if "声音" in content.lower():
                     await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_question)))
-                elif "是不是" in message.content.lower() or ("是" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
+                elif "是不是" in content.lower() or ("是" in content.lower() and ("吗" in content.lower() or "么" in content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = randchoice(list(names.values()))
                         reply += "也许是，反正我不是"
                         await self.bot.send_message(message.channel, randchoice(["不是",reply,"你才是","你在说你自己吗"]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(["是呀","嗯哼","是的","这都被你发现了","必须是","你才知道?"]))
-                elif "会不会" in message.content.lower() or ("会" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
+                elif "会不会" in content.lower() or ("会" in content.lower() and ("吗" in content.lower() or "么" in content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = randchoice(list(names.values()))
                         reply += "应该会"
                         await self.bot.send_message(message.channel, randchoice(["不会",reply,"肯定不会"]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(["会","也许吧","可能会","肯定会","看情况"]))
-                elif "想不想" in message.content.lower() or ("想" in message.content.lower() and ("吗" in message.content.lower() or "么" in message.content.lower())):
+                elif "想不想" in content.lower() or ("想" in content.lower() and ("吗" in content.lower() or "么" in content.lower())):
                     if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                         reply = "我知道"
                         reply = randchoice(list(names.values()))
@@ -152,7 +153,7 @@ class Paw:
                         await self.bot.send_message(message.channel, randchoice(["不想",reply,"没想过"]))
                     else:
                         await self.bot.send_message(message.channel, randchoice(["想","(捂脸)","天天想","你猜=w="]))
-                elif "谁是" in message.content.lower():
+                elif "谁是" in content.lower():
                         reply = randchoice(list(names.values()))
                         reply += "是"
                         await self.bot.send_message(message.channel, reply)
@@ -169,31 +170,31 @@ class Paw:
                         await self.bot.send_message(message.channel, randchoice(reply_to_gay))
                 elif badBoy == "bad":
                     await self.insult.paw_insult(message)
-                elif "你是谁" in message.content:
+                elif "你是谁" in content:
                     await self.bot.send_message(message.channel, "我是爪妹啊")
-                elif "是谁" in message.content:
+                elif "是谁" in content:
                     reply += "是个"
                     reply += randchoice(who)
                     await self.bot.send_message(message.channel, reply)
                 elif badBoy == "good":
                     await self.bot.send_message(message.channel, randchoice(greets))
-            elif "paw" in message.content.lower() or "爪" in message.content:
+            elif "paw" in content.lower() or "爪" in content:
                 badBoy = "good"
                 for keyword in dirty:
-                    if keyword in message.content.lower():
+                    if keyword in content.lower():
                         badBoy = "dirty"
                         break
                 for keyword in gay:
-                    if keyword in message.content.lower():
+                    if keyword in content.lower():
                         badBoy = "gay"
                         break
                 for keyword in swear:
-                    if keyword in message.content.lower():
+                    if keyword in content.lower():
                         badBoy = "bad"
                         break
                 if badBoy == "dirty" or badBoy == "gay" or badBoy == "bad":
                     await self.insult.paw_insult(message)
-                    voice_angry = ["angry1","angry2","angry3","angry4","angry5","angry6"]
+                    await self.lick.lick_paw(message, "lickpaw/{}.mp3".format(randchoice(voice_angry)))
                 else:
                     await self.bot.send_message(message.channel, randchoice(suspicious))
         previous = message.content
