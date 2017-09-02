@@ -103,7 +103,7 @@ class Paw:
         for fidx, feature in enumerate(feature_list):
             for keyidx, keyword in enumerate(feature):
                 if keyword in content:
-                    if feature_id == 0:
+                    if feature_id == -1:
                         feature_id = fidx
                     break
         if feature_id>=0:
