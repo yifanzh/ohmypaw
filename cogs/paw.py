@@ -99,18 +99,21 @@ class Paw:
 
     def parse_message(self, content=""):
         log.debug("Parsing message: " + content)
-        feature_id = 0
+        feature_id = -1
         for fidx, feature in enumerate(feature_list):
             for keyidx, keyword in enumerate(feature):
                 if keyword in content:
                     if feature_id == 0:
                         feature_id = fidx
                     break
-        resp = random.choice(response_list[feature_id])
-        resp1 = resp[random.randint(0, len(resp)-1)]
-        resp2 = "lickpaw/" + resp1 + ".mp3"
-        log.debug("Parsing message: respond with " + resp2)
-        return resp2
+        if feature_id>=0:
+        	resp = random.choice(response_list[feature_id])
+            resp1 = resp[random.randint(0, len(resp)-1)]
+            resp2 = "lickpaw/" + resp1 + ".mp3"
+            log.debug("Parsing message: respond with " + resp2)
+            return resp2
+        else:
+        	return None
 
 
     async def on_message(self, message):
@@ -209,10 +212,12 @@ class Paw:
                 await self.bot.send_message(message.channel, reply)
             else:
                 reply_filename = self.parse_message(content_all)
-                await self.lick.lick_paw(message, reply_filename)
+                if reply_filename is not None:
+                    await self.lick.lick_paw(message, reply_filename)
         elif "paw" in content.lower() or "爪" in content:
             reply_filename = self.parse_message(content_all)
-            await self.lick.lick_paw(message, reply_filename)
+            if reply_filename is not None:
+                await self.lick.lick_paw(message, reply_filename)
    
         previous = message    
         reply = ""
