@@ -21,7 +21,7 @@ myName = ["paw", "小爪","大鸡吧酱","弱鸡爪","爪","爪妹"]
 greets = ["http://imgur.com/47vI9T5", "QwQ", "=w=" , "(:з」∠)", "=A=","http://imgur.com/Y5DMDqH", "昨天太近，明天太远，今天你有什么需要吗？"]
 names = {"Dragon":"爪公","Fangzhuan":"Gay砖","Baoz":"包子","Andrew":"Andrew","Givemepaw":"假小爪","hf":"贼神","ppadante":"弱鸡嫩","Cielyc":"欧皇","illidanaire":"王总","Maxxia":"Max","Vurtune":"凯总","chopper":"Chopper"
 ,"Danker":"Danker","Miyano":"随老师","momotea":"momotea","Doombefall":"2k","Silentstorm":"Senpai","Mylei":"Emily","Arthies":"Zach","lm54484":"比利"}
-dirty = ["penis","ass","丁丁","鸡","菊花","vagina","打飞机","下面"]
+dirty = ["penis","ass","丁丁","鸡鸡","菊花","vagina","打飞机","下面"]
 reply_to_dirty = ["太污了","有毒吧","你们太污了","不懂你们在说什么","我看不懂","你们有毒吧","...","哈?","啊?","妈个鸡","...","这帮傻屌..."]
 gay = ["喜欢","爱","上","fuck","干","舔","插","打炮","gay","基","爽","操","草","艹","肏"]
 reply_to_gay = ["你们这群gay","有毒吧","谁来把这人屏蔽了","...","傻逼吧","你们不要欺负我","调戏我的都是傻逼","别闹","窝要同归于尽 （举炸药包"]
