@@ -107,13 +107,13 @@ class Paw:
                         feature_id = fidx
                     break
         if feature_id>=0:
-        	resp = random.choice(response_list[feature_id])
+            resp = random.choice(response_list[feature_id])
             resp1 = resp[random.randint(0, len(resp)-1)]
             resp2 = "lickpaw/" + resp1 + ".mp3"
             log.debug("Parsing message: respond with " + resp2)
             return resp2
         else:
-        	return None
+            return None
 
 
     async def on_message(self, message):
