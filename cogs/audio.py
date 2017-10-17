@@ -784,7 +784,7 @@ class Audio:
 
     def _match_bili_url(self, url):
         bili_url = re.compile(
-                r'^(https?\:\/\/)?(www\.)?(bilibili\.com\/video\/av[0-9]{7}\/)')
+                r'^(https?\:\/\/)?(www\.)?(bilibili\.com\/video\/av[0-9]+\/)')
         if bili_url.match(url):
             return True
         return False
