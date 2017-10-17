@@ -782,6 +782,13 @@ class Audio:
             return True
         return False
 
+    def _match_bili_url(self, url):
+        bili_url = re.compile(
+                r'^(https?\:\/\/)?(www\.)?(bilibili\.com\/video\/av[0-9]{7}\/)')
+        if bili_url.match(url):
+            return True
+        return False
+
     def _match_sc_url(self, url):
         sc_url = re.compile(
             r'^(https?\:\/\/)?(www\.)?(soundcloud\.com\/)')
@@ -1116,7 +1123,8 @@ class Audio:
     def _valid_playable_url(self, url):
         yt = self._match_yt_url(url)
         sc = self._match_sc_url(url)
-        if yt or sc:  # TODO: Add sc check
+        bili = self._match_bili_url(url)
+        if yt or sc or bili:  # TODO: Add sc check
             return True
         return False
     
