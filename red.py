@@ -482,7 +482,7 @@ def set_logger(bot):
         logger.setLevel(logging.DEBUG)
     else:
         stdout_handler.setLevel(logging.INFO)
-        logger.setLevel(logging.INFO)
+        logger.setLevel(logging.DEBUG)
 
     fhandler = logging.handlers.RotatingFileHandler(
         filename='data/red/red.log', encoding='utf-8', mode='a',
