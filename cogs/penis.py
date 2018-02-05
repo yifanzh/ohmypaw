@@ -15,7 +15,9 @@ class Penis:
         This is 100% accurate."""
         state = random.getstate()
         random.seed(user.id)
-        dong = "8{}D".format("=" * random.randint(0, 30))
+        avg_dong = random.randint(0, 30)
+        dong = "8{}D".format("=" * random.randint(max(0, avg_dong - 5), avg_dong
+            + 5))
         random.setstate(state)
         await self.bot.say("Size: " + dong)
 
