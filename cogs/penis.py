@@ -12,7 +12,9 @@ class Penis:
     async def penis(self, *, user : discord.Member):
         """Detects user's penis length
 
-        This is 100% accurate."""
+        This is 100% accurate.
+
+        2/5 更新:现在会随机伸缩了(在原来长度基础上)"""
         state = random.getstate()
         random.seed(user.id)
         avg_dong = random.randint(0, 30)
