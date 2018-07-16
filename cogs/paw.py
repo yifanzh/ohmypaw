@@ -38,7 +38,7 @@ names = {"Dragon":"爪公",
         "Silentstorm":"Senpai",
         "Mylei":"Emily",
         "Arthies":"Zach",
-        "lm54484":"比利"
+        "lm54484":"比利",
         "Dubushuo":"985带孔"}
 
 dirty = ["penis","ass","丁丁","鸡鸡","菊花","vagina","打飞机","下面"]

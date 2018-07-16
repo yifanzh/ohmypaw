@@ -468,7 +468,7 @@ def interactive_setup(settings):
 
 def set_logger(bot):
     logger = logging.getLogger("red")
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG)
 
     red_format = logging.Formatter(
         '%(asctime)s %(levelname)s %(module)s %(funcName)s %(lineno)d: '

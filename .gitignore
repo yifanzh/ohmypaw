@@ -11,3 +11,7 @@ data/red/cogs.json
 data/red/red.log
 data/streams/picarto.json
 *.command
+start_red*
+start_launcher.sh
+start_launcher.command
+lib
